@@ -2,7 +2,7 @@
 
 int main(){
 
-    int o, n, m;
+    int o, n, m; //Inicializar variables para el numero de matrices, filas y columnas
 
     printf("Ingresar el numero de matrices a tratar: ");
     scanf("%d", &o);
@@ -11,7 +11,9 @@ int main(){
     printf("Ingresar el numero de columnas de las matrices: ");
     scanf("%d", &m);
 
-    int matriz[n][m][o];
+    //El usuario ingresa los datos
+
+    int matriz[n][m][o]; //Inicializacion del arreglo tridimencional
 
         for (int k = 0; k < o; k++)
     {
@@ -22,7 +24,7 @@ int main(){
                 
                 if ((o-1)==k)
                 {
-                    matriz[i][j][k]=1;
+                    matriz[i][j][k]=1; //Las matrices son inicializadas con ceros a excepcion de la ultima donde esta llena de ceros
                 }else{
                     matriz[i][j][k]=0;
                 }
@@ -41,7 +43,7 @@ int main(){
             printf("\n");
             for (int j = 0; j < m; j++)
             {
-                printf("%d ", matriz[i][j][k]);
+                printf("%d ", matriz[i][j][k]); //Finalmente se imprimen las matrices y sus filas y columnas que haya el usuario pedido
             }
             
         }
